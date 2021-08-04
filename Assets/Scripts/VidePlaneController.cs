@@ -27,6 +27,7 @@ public class VidePlaneController : MonoBehaviour
     
     public void OnImageLostTracked(){
         VideoPlaneLocation();
+        m_animator.SetTrigger("idle");
     }
 
     public void VideoPlaneLocation(){
