@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VidePlaneController : MonoBehaviour
+public class PortraitAnimation : MonoBehaviour
 {
-    [SerializeField] GameObject video;
+    [SerializeField] GameObject portrait;
 
     Animation m_animation;
     Animator m_animator;
     // Start is called before the first frame update
     void Start()
     {
-        m_animation = video.GetComponent<Animation>();
-        m_animator = video.GetComponent<Animator>();
+        m_animation = portrait.GetComponent<Animation>();
+        m_animator = portrait.GetComponent<Animator>();
 
     }
 
@@ -23,10 +23,12 @@ public class VidePlaneController : MonoBehaviour
     }
 
     public void OnImageTracked(){
-        m_animator.SetTrigger("moveup");
+        m_animator.SetTrigger("portraitmoveright");
     }
     
     public void OnImageLostTracked(){
-        m_animator.SetTrigger("idle");
+        m_animator.SetTrigger("portraitidle");
     }
+
+
 }
