@@ -21,7 +21,10 @@ public class ButtonController : MonoBehaviour
 #if PLATFORM_IOS
     Application.OpenURL("mailto://yvr.studio.official@gmail.com");
 #else
-    Application.OpenURL("googlegmail://co?to={yvr.studio.official@gmail.com}&subject={subject}&body={body}");
+    //for anddriod by pop
+    // Application.OpenURL ("mailto:someone@gmail.com?subject=EmailSubject&body=EmailBody");
+
+    //Application.OpenURL("googlegmail://co?to={yvr.studio.official@gmail.com}&subject={subject}&body={body}");
 #endif
     }
 }
